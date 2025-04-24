@@ -1,63 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Drive-in</title>
   <style>
-    body, html {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1601330053579-37e7d16d6d5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1920&q=80'); /* entardecer com estrelas */
       background-size: cover;
-      z-index: -2;
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: -1;
-    }
-
-    .content {
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100%;
-      color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
     }
 
     .video-container {
-      position: relative;
-      width: 90%;
+      width: 80%;
       max-width: 960px;
       aspect-ratio: 16 / 9;
-      box-shadow: 0 0 20px rgba(0,0,0,0.8);
-      border: 3px solid white;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+      border: 4px solid #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #000;
     }
 
     iframe {
@@ -68,13 +37,8 @@
   </style>
 </head>
 <body>
-  <div class="background"></div>
-  <div class="overlay"></div>
-  <div class="content">
-    <h1>Drive-in</h1>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/YWCyCf6GI_o?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/YWCyCf6GI_o?autoplay=1&mute=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </body>
 </html>
