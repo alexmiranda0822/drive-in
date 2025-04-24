@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drive-in Virtual</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background-image: url('https://images.unsplash.com/photo-1503410753423-9f716a2a1197?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+    }
+
+    .screen {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 960px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 540px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="screen">
+    <iframe src="https://www.youtube.com/embed/9G4jnaznUoQ?autoplay=1&controls=1" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
