@@ -11,19 +11,21 @@
       color: white;
       font-family: Arial, sans-serif;
       overflow: hidden;
-      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d'); /* céu nublado */
+      background-image: url('https://images.unsplash.com/photo-1533612608997-212b06408bb9'); /* céu entardecer */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
+
     .overlay {
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(0, 0, 0, 0.6); /* opacidade de 60% */
       position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
       left: 0;
     }
+
     .video-container {
       position: absolute;
       top: 50%;
@@ -34,12 +36,14 @@
       aspect-ratio: 16 / 9;
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
       border-radius: 10px;
     }
+
     h1 {
       position: absolute;
       top: 20px;
@@ -49,6 +53,13 @@
       letter-spacing: 2px;
       color: #ffffffcc;
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -56,7 +67,7 @@
     <h1>Drive-in</h1>
     <div class="video-container">
       <iframe 
-        src="https://www.youtube.com/embed/YWCyCf6GI_o?autoplay=1&mute=1" 
+        src="https://www.youtube.com/embed/YWCyCf6GI_o?autoplay=1&mute=0" 
         title="Filme Drive-in Ao Vivo"
         allow="autoplay; encrypted-media"
         allowfullscreen>
